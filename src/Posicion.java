@@ -54,4 +54,28 @@ public class Posicion {
     }
 
 
+    //paso 5 crea los metodos equals y hashCode
+
+
+    //hashCode
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), fila, columna);
+    }
+    //equals
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        Posicion posicion = (Posicion) object;
+        return fila == posicion.fila && columna == posicion.columna;
+    }
+
+    //paso 6 crea el metodo toString
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Posicion{" +
+                "fila=" + fila +
+                ", columna=" + columna +
+                '}';
+    }
 }
