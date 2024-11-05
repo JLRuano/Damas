@@ -14,4 +14,12 @@ public enum Color {
         this.cadenaAMostrar = cadenaAMostrar;
     }
 
+
+    //paso 4 crear el metodo toString
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Color{" +
+                "cadenaAMostrar='" + cadenaAMostrar + '\'' +
+                '}';
+    }
 }
