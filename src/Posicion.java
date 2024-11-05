@@ -14,6 +14,12 @@ public class Posicion {
             setColumna(columna);
     }
 
+    //paso 5 constructor copia
+    public Posicion (Posicion posicion) {
+        this.fila = fila;
+        this.columna = columna;
+    }
+
 
 
     //paso 2 crear get y set
