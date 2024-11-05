@@ -2,7 +2,7 @@ package programacion.damas;
 
 public enum Direccion {
 
-    //paso 1 crea un enumerado
+    //paso 1 crea los literales
     NORESTE ("noreste"), SURESTE ("sureste"), SUROESTE ("suroeste"), NOROESTE ("noroeste");
 
     //paso 2 crea el atributo
