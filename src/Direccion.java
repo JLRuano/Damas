@@ -6,4 +6,8 @@ public enum Direccion {
 
     private String cadenaAMostrar;
 
+    private Direccion (String cadenaAMostrar)
+    {
+        this.cadenaAMostrar = cadenaAMostrar;
+    }
 }
