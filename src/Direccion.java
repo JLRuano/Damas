@@ -21,4 +21,5 @@ public enum Direccion {
                 "cadenaAMostrar='" + cadenaAMostrar + '\'' +
                 '}';
     }
+
 }
