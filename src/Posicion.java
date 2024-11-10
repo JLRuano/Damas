@@ -16,15 +16,16 @@ public class Posicion {
 
     //paso 5 constructor copia
     public Posicion (Posicion posicion) {
-        this.fila = fila;
-        this.columna = columna;
+        if (posicion == null) {
+            throw new IllegalArgumentException ("no se puede dar una posicion nula");
+        }
+        this.fila = posicion.fila;
+        this.columna = posicion.columna;
     }
 
 
 
     //paso 2 crear get y set
-
-
     //set de fila
     private void setFila(int fila) {
         if (fila <1 || fila >8) {
