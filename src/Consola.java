@@ -6,7 +6,7 @@ public class Consola {
     //paso 2 crea el constructor
     private Consola() {}
 
-    // crea el metodo mostrarMenu
+    //paso 3 crea el metodo mostrarMenu
     public static void mostrarMenu(){
         System.out.println("menu de opciones");
         System.out.println("1. crear dama por defecto");
@@ -14,6 +14,17 @@ public class Consola {
         System.out.println("3. mover");
         System.out.println("4. salir");
     }
+
+    //paso 4 crea el metodo elegirOpcionMenu
+    publiv static int elegirOpcionMenu() {
+        int opcion;
+        do {
+            System.out.print("elige una opcion del menu dando un numero entre el 1 y el 4: ");
+            opcion = scanner.nextInt();
+        } while (opcion <1 || opcion > 4);
+        return opcion;
+    }
+
 
 
 }
