@@ -47,6 +47,63 @@ public class Dama {
         this.posicion = posicion;
     }
 
+
+    //paso 5 metodo mover
+    public void mover (Direccion direccion, int pasos)
+    //paso 5.1 la direccion no puede ser nula
+        throws OperationNotSupportedException {
+        if (direccion == null) {
+            throw IllegalArgumentException("la direccion no puede ser nula");
+        }
+        //paso 5.1.1 si la dama aun no es especial
+        if (!esDamaEspecial && pasos>1) {
+            throw IllegalArgumentException("si la dama no es especial no puede moverse mas de un paso");
+        }
+        //paso 5.2 casillas que se mueve la dama
+        if (pasos <1) {
+            throw IllegalArgumentException("el numero de pasos no puede ser menor que 1");
+        }
+
+        //movimientos
+        int nuevaFila = posicion.getFila();
+        char nuevaColumna = posicion.getColumna();
+
+        switch (direccion) {
+            case NORESTE:
+                nuevaFila += pasos;
+                nuevaColumna += pasos;
+                break;
+            case SURESTE:
+                nuevaFila -= pasos;
+                nuevaColumna += pasos;
+                break;
+            case SUROESTE:
+                nuevaFila -= pasos;
+                nuevaColumna -= pasos;
+                break;
+            case NOROESTE:
+                nuevaFila += pasos;
+                nuevaColumna -= pasos;
+                break;
+
+        }
+        //5.4 si no se puede realizar un movimiento
+        if (nuevaFila <1 !! nuevaFila >8 || nuevaColumna < "a" || nuevaColumna > "h"){
+            throw new OperationNotSupportedException("el movimiento sale del tablero");
+        }
+
+        //paso 5.3 si la dama llega al extremo del tablero
+        if ((color == Color.BLANCO && nuevaFila == 8) || (Color.NEGRO && nuevaFila == 1)) {
+            esDamaEspecial = true;
+        }
+
+
+
+
+    }
+
+
+
     //paso 4.1 metodo crearPosicionInicial
 
     private Posicion crearPosicionInicial() {
@@ -66,6 +123,8 @@ public class Dama {
 
         return new Posicion(fila, columna);
     }
+
+
 
 
 
