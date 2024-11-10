@@ -96,12 +96,7 @@ public class Dama {
         if ((color == Color.BLANCO && nuevaFila == 8) || (Color.NEGRO && nuevaFila == 1)) {
             esDamaEspecial = true;
         }
-
-
-
-
     }
-
 
 
     //paso 4.1 metodo crearPosicionInicial
@@ -126,7 +121,13 @@ public class Dama {
 
 
 
-
-
-
+    //paso 6 crea el metodo toString
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Dama{" +
+                "color=" + color +
+                ", posicion=" + posicion +
+                ", esDamaEspecial=" + esDamaEspecial +
+                '}';
+    }
 }
