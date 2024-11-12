@@ -9,7 +9,7 @@ public class MainApp {
     private static void ejecutarOpcion (int opcion) {
         switch (opcion) {
             case 1:
-                ;
+                crearDamaDefecto;
                 break;
             case 2:
                 ;
@@ -22,6 +22,12 @@ public class MainApp {
                 break;
 
         }
+
+        //paso 3 crear metodo crearDamaDefecto
+        private static void crearDamaDefecto() {
+            dama = new Dama();
+        }
+
 
 
     }
