@@ -34,5 +34,24 @@ public class MainApp {
             dama = new Dama(color);
         }
 
+        //paso 5 crear metodo mover
+        private static void mover() {
+            if (dama == null) {
+                System.out.println("antes tienes que crear una dama");
+                return;
+            }
+
+            Consola.mostrarMenuDirecciones();
+            Direccion direccion = Consola.ElegirDireccion();
+            int pasos = dama.isEsDamaEspecial() ? Consola.ElegirPasos() : 1;
+
+            //copiado
+            try {
+                dama.mover(direccion, pasos);
+            } catch (OperationNotSupportedException e) {
+                System.out.println(e.getMessage());
+            }
     }
+
+
 }
