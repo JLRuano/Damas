@@ -5,6 +5,19 @@ public class MainApp {
     //paso 1 crea el atributo de clase dama
     private static Dama dama;
 
+
+    //paso 7 crear metodo main
+    public static void main(String[] args) {
+    int opcion;
+    do {
+        Consola.mostrarMenu();
+        opcion = Consola.elegirOpcionMenu();
+        ejecutarOpcion(opcion);
+    }while (opcion != 4);
+    }
+}
+
+
     //paso 2 crea el metodo ejecutarOpcion
     private static void ejecutarOpcion (int opcion) {
         switch (opcion) {
@@ -60,7 +73,6 @@ public class MainApp {
                     System.out.println("no hay dama creada");
                 }
             }
-
 
     }
 
