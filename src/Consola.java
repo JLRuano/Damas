@@ -68,4 +68,14 @@ public class Consola {
                 throw new IllegalArgumentException("direccion no disponible");
         }
 
+        //paso 8 crear metodo elegirPasos
+        public static int elegirPasos() {
+            int pasos;
+            do {
+                System.out.print("elige el numero de casillas: ");
+                pasos = scanner.nextInt();
+            }while (pasos <1);
+            return pasos;
+        }
+
     }
