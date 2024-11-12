@@ -25,6 +25,19 @@ public class Consola {
         return opcion;
     }
 
+    //paso 5 crea el metodo elegirOpcion
+    public static Color elegirOpcion() {
+        int opcion;
+        do {
+            System.out.println("elige una opcion entre:");
+            System.out.println("1. blanco");
+            System.out.println("2. negro");
+            opcion = scanner.nextInt();
+        } while (opcion <1 || opcion > 2);
+        return (opcion == 1) ? Color.BLANCO : Color.NEGRO;
+    }
+
+
 
 
 }
