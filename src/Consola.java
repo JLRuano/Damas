@@ -1,7 +1,9 @@
 package programacion.damas;
 
+import java.util.Scanner;
 public class Consola {
 
+    private static final Scanner scanner = new Scanner(System.in);
     //paso 1 crea la clase de utilidades Consola
     //paso 2 crea el constructor
     private Consola() {}
@@ -37,7 +39,7 @@ public class Consola {
         return (opcion == 1) ? Color.BLANCO : Color.NEGRO;
     }
 
-    //crea el metodo mostrarMenuDirecciones
+    //paso 6 crea el metodo mostrarMenuDirecciones
     public static void mostrarMenuDirecciones() {}
     System.out.println("direcciones");
     System.out.println("1. noreste");
@@ -46,3 +48,24 @@ public class Consola {
     System.out.println("4. noroeste");
 }
 
+    //paso 7 crea el metodo elegirDireccion
+    public static Direccion elegirDireccion() {
+        int opcion;
+        do {
+            System.out.println("elige una direccion: ");
+            opcion = scanner.nextInt();
+        } while (opcion < 1 || opcion >4);
+        switch (opcion) {
+            case 1:
+                return Direccion.NORESTE;
+            case 2:
+                return direccion.SURESTE;
+            case 3:
+                return Direccion.SUROESTE:
+            case 4:
+                return Direccion:NOROESTE:
+            default:
+                throw new IllegalArgumentException("direccion no disponible");
+        }
+
+    }
