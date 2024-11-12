@@ -78,4 +78,8 @@ public class Consola {
             return pasos;
         }
 
+        //paso 9 crear metodo despedirse
+        public static void despedirse() {
+            System.out.println("¡hasta luego!");
+        }
     }
