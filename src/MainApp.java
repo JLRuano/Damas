@@ -51,6 +51,17 @@ public class MainApp {
             } catch (OperationNotSupportedException e) {
                 System.out.println(e.getMessage());
             }
+
+            // paso 6 crear metodo mostrarDama
+        private static void mostrarDama() {
+                if (dama != null) {
+                    System.out.println(dama);
+                } else {
+                    System.out.println("no hay dama creada");
+                }
+            }
+
+
     }
 
 
