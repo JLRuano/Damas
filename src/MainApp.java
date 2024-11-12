@@ -28,7 +28,11 @@ public class MainApp {
             dama = new Dama();
         }
 
-
+        //paso 4 crear metodo crearDamaColor
+        private static void crearDamaColor() {
+            Color color = Consola.elegirOpcion();
+            dama = new Dama(color);
+        }
 
     }
 }
