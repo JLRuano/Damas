@@ -37,7 +37,12 @@ public class Consola {
         return (opcion == 1) ? Color.BLANCO : Color.NEGRO;
     }
 
-
-
-
+    //crea el metodo mostrarMenuDirecciones
+    public static void mostrarMenuDirecciones() {}
+    System.out.println("direcciones");
+    System.out.println("1. noreste");
+    System.out.println("2. sureste");
+    System.out.println("3. suroeste");
+    System.out.println("4. noroeste");
 }
+
